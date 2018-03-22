@@ -1,4 +1,4 @@
-# Numerical Diagonalization of 3x3 Matrices.
+# Efficient computation of eigenvalues and eigenvectors of 3x3 matrices.
 See original work at https://www.mpi-hd.mpg.de/personalhomes/globes/3x3/.
 
 A common scientific problem is the numerical calculation of the
