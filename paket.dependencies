@@ -1,0 +1,12 @@
+framework: net45
+source https://api.nuget.org/v3/index.json
+
+nuget Aardvark.Base
+
+
+group Build
+framework: net45
+content: none
+source https://api.nuget.org/v3/index.json
+
+github aardvark-platform/aardvark.fake:standalone
