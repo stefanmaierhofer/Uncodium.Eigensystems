@@ -1,12 +1,12 @@
-framework: net45
+framework: netstandard2.0
 source https://api.nuget.org/v3/index.json
 
-nuget Aardvark.Base
+nuget Aardvark.Base     ~> 4.0.3
 
 
 group Build
-framework: net45
+framework: netstandard2.0
 content: none
 source https://api.nuget.org/v3/index.json
 
-github aardvark-platform/aardvark.fake:standalone
+github aardvark-platform/aardvark.fake:v4
