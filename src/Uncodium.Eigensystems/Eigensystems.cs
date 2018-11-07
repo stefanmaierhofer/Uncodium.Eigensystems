@@ -356,7 +356,96 @@ namespace Uncodium
 
             return true;
         }
-        
+        /// <summary>
+        /// Same as Dsyevh3, but additional order of Eigenvalues (ascending).
+        /// </summary>
+        public static bool Dsyevh3asc(this in M33d A, out M33d Q, out V3d w, out int[] order)
+        {
+            if (Dsyevh3(A, out Q, out w))
+            {
+                order = GetOrderAscending(in w);
+                return true;
+            }
+            else
+            {
+                order = s_order012;
+                return false;
+            }
+        }
+        /// <summary>
+        /// Same as Dsyevh3, but additional order of Eigenvalues (descending).
+        /// </summary>
+        public static bool Dsyevh3desc(this in M33d A, out M33d Q, out V3d w, out int[] order)
+        {
+            if (Dsyevh3(A, out Q, out w))
+            {
+                order = GetOrderDescending(in w);
+                return true;
+            }
+            else
+            {
+                order = s_order012;
+                return false;
+            }
+        }
+
+        private static int[] GetOrderAscending(in V3d w)
+        {
+            if (w.X < w.Y)
+            {
+                if (w.X < w.Z)
+                {
+                    return w.Y < w.Z ? s_order012 : s_order021;
+                }
+                else
+                {
+                    return s_order201;
+                }
+            }
+            else
+            {
+                if (w.X < w.Z)
+                {
+                    return s_order102;
+                }
+                else
+                {
+                    return w.Y < w.Z ? s_order120 : s_order210;
+                }
+            }
+        }
+        private static int[] GetOrderDescending(in V3d w)
+        {
+            if (w.X > w.Y)
+            {
+                if (w.X > w.Z)
+                {
+                    return w.Y > w.Z ? s_order012 : s_order021;
+                }
+                else
+                {
+                    return s_order201;
+                }
+            }
+            else
+            {
+                if (w.X > w.Z)
+                {
+                    return s_order102;
+                }
+                else
+                {
+                    return w.Y > w.Z ? s_order120 : s_order210;
+                }
+            }
+        }
+        private static readonly int[] s_order012 = new[] { 0, 1, 2 };
+        private static readonly int[] s_order021 = new[] { 0, 2, 1 };
+        private static readonly int[] s_order102 = new[] { 1, 0, 2 };
+        private static readonly int[] s_order120 = new[] { 1, 2, 0 };
+        private static readonly int[] s_order201 = new[] { 2, 0, 1 };
+        private static readonly int[] s_order210 = new[] { 2, 1, 0 };
+
         /// <summary>
         /// Calculates the eigenvalues and normalized eigenvectors of a symmetric 3x3
         /// matrix A using the Jacobi algorithm.
