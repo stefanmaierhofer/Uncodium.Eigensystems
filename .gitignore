@@ -14,3 +14,4 @@ bin/Debug
 /Aardvark.log
 /sources.lock
 /.paket/Paket.Restore.targets
+/.paket

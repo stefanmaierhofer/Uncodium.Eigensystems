@@ -1,7 +1,7 @@
 framework: netstandard2.0
 source https://api.nuget.org/v3/index.json
 
-nuget Aardvark.Base     ~> 5.0.0-prerelease
+nuget Aardvark.Base     ~> 5.0.4
 
 group Build
 framework: netstandard2.0
