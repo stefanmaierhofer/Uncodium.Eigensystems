@@ -1,10 +1,10 @@
 framework: netstandard2.0
 source https://api.nuget.org/v3/index.json
 
-nuget Aardvark.Base     ~> 5.0.4
+nuget Aardvark.Base     ~> 5.1.1-prerelease0002
 
 group Build
 framework: netstandard2.0
 source https://api.nuget.org/v3/index.json
-
+nuget fake-cli ~> 5.20.4-alpha.1642
 github aardvark-platform/aardvark.fake:v5
