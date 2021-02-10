@@ -1,13 +1,13 @@
 RESTRICTION: == netstandard2.0
 NUGET
   remote: https://api.nuget.org/v3/index.json
-    Aardvark.Base (5.1.1-prerelease0002)
-      Aardvark.Base.Telemetry (5.1.1-prerelease0002)
-      DevILSharp (>= 0.2.9 < 0.3)
-      System.Collections.Immutable (>= 1.7.1)
-      System.Reflection.Metadata (>= 1.8.1)
+    Aardvark.Base (5.1.3)
+      Aardvark.Base.Telemetry (5.1.3)
+      DevILSharp (>= 0.2.11 < 0.3)
+      System.Collections.Immutable (>= 1.7)
+      System.Reflection.Metadata (>= 1.8)
       System.Text.Json (>= 4.7.2)
-    Aardvark.Base.Telemetry (5.1.1-prerelease0002)
+    Aardvark.Base.Telemetry (5.1.3)
     DevILSharp (0.2.11)
       FSharp.Core (>= 4.6.2)
     FSharp.Core (5.0)
