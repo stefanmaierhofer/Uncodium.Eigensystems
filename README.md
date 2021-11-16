@@ -1,3 +1,7 @@
+[![windows](https://github.com/stefanmaierhofer/Uncodium.Eigensystems/actions/workflows/windows.yml/badge.svg)](https://github.com/stefanmaierhofer/Uncodium.Eigensystems/actions/workflows/windows.yml)
+[![linux](https://github.com/stefanmaierhofer/Uncodium.Eigensystems/actions/workflows/linux.yml/badge.svg)](https://github.com/stefanmaierhofer/Uncodium.Eigensystems/actions/workflows/linux.yml)
+[![macos](https://github.com/stefanmaierhofer/Uncodium.Eigensystems/actions/workflows/macos.yml/badge.svg)](https://github.com/stefanmaierhofer/Uncodium.Eigensystems/actions/workflowsmacoswindows.yml)
+
 # Efficient computation of eigenvalues and eigenvectors of 3x3 matrices.
 See original work at https://www.mpi-hd.mpg.de/personalhomes/globes/3x3/.
 
